@@ -8,3 +8,11 @@ npm i create-react-app@latest -g
 npx create-react-app counter-react --template cra-template-pwa-typescript
 
 ```
+
+# Add FireBase
+
+```
+npm install firebase-tools@latest -g
+firebase login
+firebase init
+```
