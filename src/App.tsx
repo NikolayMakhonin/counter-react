@@ -1,17 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import {css} from 'reshadow'
+import styled from 'reshadow/macro'
+import styles from './App.module.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+  console.log('styles', styles, css`app { background: blue; }`)
+  console.log('styles reshadow', css`app { background: blue; }`)
+  return styled(styles)(
+    <app as="div">
+      <header>
+        <logo as="img" src={logo} alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <button>src/App.tsx</button> and save to reload.
         </p>
         <a
-          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -19,8 +22,8 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </app>
   );
 }
 
-export default App;
+export default App
