@@ -29,9 +29,9 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "cross-env REACT_APP_FIREBASE_URL=http://localhost:5000 react-scripts start",
+    "test": "cross-env REACT_APP_FIREBASE_URL=http://localhost:5000 react-scripts test",
+    "build": "cross-env REACT_APP_FIREBASE_URL= react-scripts build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -51,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
